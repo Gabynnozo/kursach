@@ -1,0 +1,18 @@
+﻿<Window x:Class="Arenda.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:Arenda"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        
+            <TextBox x:Name="TBlog" HorizontalAlignment="Left" Height="23" Margin="269,120,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Введите Логин" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="PBpass" HorizontalAlignment="Left" Margin="269,175,0,0" VerticalAlignment="Top" Width="120" materialDesign:HintAssist.Hint="Введите Пароль"/>
+        <Button x:Name="btlog" Content="Войти" HorizontalAlignment="Left" Margin="269,236,0,0" VerticalAlignment="Top" Width="120" Click="btlog_Click"/>
+        <Button x:Name="btexit1" Content="Закрыть" HorizontalAlignment="Left" Margin="269,302,0,0" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

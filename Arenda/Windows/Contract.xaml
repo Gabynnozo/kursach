@@ -1,0 +1,26 @@
+﻿<Window x:Class="Arenda.Windows.Object"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Arenda.Windows"
+        mc:Ignorable="d"
+        Title="Object" Height="450" Width="1050">
+    <Grid>
+        <DataGrid x:Name="DGobject" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Цена"  Binding="{Binding Cost}" ClipboardContentBinding="{x:Null}"/>
+                <DataGridTextColumn Header="Комиссия Агента" Binding="{Binding Commission}" ClipboardContentBinding="{x:Null}"/>
+                <DataGridTextColumn Header="Площадь" Binding="{Binding ObjectArea}" ClipboardContentBinding="{x:Null}"/>
+                <DataGridTextColumn Header="Количество комнат" Binding="{Binding Rooms}" ClipboardContentBinding="{x:Null}"/>
+                <DataGridTextColumn Header="Описание" Binding="{Binding Description}" ClipboardContentBinding="{x:Null}"/>
+                <DataGridTextColumn Header="Контрагент" Binding="{Binding Contragent}" ClipboardContentBinding="{x:Null}"/>
+                <DataGridTextColumn Header="Адрес" Binding="{x:Null}" ClipboardContentBinding="{x:Null}"/>
+                <DataGridTextColumn Header="Агент" Binding="{x:Null}" ClipboardContentBinding="{x:Null}"/>
+                <DataGridTextColumn Header="Тип Обьекта" Binding="{x:Null}" ClipboardContentBinding="{x:Null}"/>
+                <DataGridTextColumn Header="Дата создания" Binding="{x:Null}" ClipboardContentBinding="{x:Null}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

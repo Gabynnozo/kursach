@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="23d360202f80461fb45d33f99d4d4330" Name="Diagram1">
+        <EntityTypeShape EntityType="ArendaModel.Address" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArendaModel.Agent" Width="1.5" PointX="2.875" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArendaModel.Contract" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArendaModel.Contragent" Width="1.5" PointX="6.5" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArendaModel.Object" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArendaModel.Order" Width="1.5" PointX="8.125" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArendaModel.Status" Width="1.5" PointX="10.625" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArendaModel.TContract" Width="1.5" PointX="9.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArendaModel.TypeObject" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <AssociationConnector Association="ArendaModel.FK_Object_Address" ManuallyRouted="false" />
+        <AssociationConnector Association="ArendaModel.FK_Contract_Agent" ManuallyRouted="false" />
+        <AssociationConnector Association="ArendaModel.FK_Contract_Object" ManuallyRouted="false" />
+        <AssociationConnector Association="ArendaModel.FK_Contract_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="ArendaModel.FK_Contract_TContract" ManuallyRouted="false" />
+        <AssociationConnector Association="ArendaModel.FK_Order_Contragent" ManuallyRouted="false" />
+        <AssociationConnector Association="ArendaModel.FK_Object_TypeObject" ManuallyRouted="false" />
+        <AssociationConnector Association="ArendaModel.FK_Order_Status" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
