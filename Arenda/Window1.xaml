@@ -1,0 +1,23 @@
+﻿<Window x:Class="Arenda.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Arenda"
+        mc:Ignorable="d"
+        Title="Window1" Height="600" Width="594">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left"  TextWrapping="Wrap" VerticalAlignment="Center" Margin="198,19,0,497" Height="53" Width="184" FontSize="20" RenderTransformOrigin="0.483,-0.08"><Run Text="Договор Аренды"/><LineBreak/><Run Text="Недвижимости"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="20,105,0,0" TextWrapping="Wrap"       VerticalAlignment="Top" Width="135"><Run Text="г.___________"/><Run Text="____"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="424,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135"><Run Text="&lt;&lt;"/><Run Text="___"/><Run Text="&gt;&gt;_________20__ "/><Run Text="г."/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="20,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="539"><Run Text="Гр."/><Run Text="_____________________________________________________________"/><Run Text=",паспорт:"/><Run Text=" c"/><Run Text="ерия_________,№_____________,"/><LineBreak/><Run Text="выданный"/><Run Text="__________________________________________"/><Run Text=",проживающий"/><Run Text=" "/><Run Text="по адресу:"/><LineBreak/><Run Text="______________________________________________________"/><Run Text="_______________"/><Run Text=",именуемый в дальнейшем"/><LineBreak/><Run Text=""/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="20,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" FontWeight="Bold"><Run Text="&lt;&lt;"/><Run Text="Арендодатель"/><Run Text="&gt;&gt;"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="144,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="415"><Run Text=",с другой стороны,именуемые в дальнейшем "/><Run Text="&lt;&lt;"/><Run Text="Стороны"/><Run Text="&gt;&gt;"/><Run Text=",заключили  "/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="20,219,0,0" TextWrapping="Wrap" Text="договор,в дальнейшем" VerticalAlignment="Top" Width="135"/>
+        <TextBlock HorizontalAlignment="Left" Margin="160,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="97" FontWeight="Bold"><Run Text="&lt;&lt;"/><Run Text="Договор"/><Run Text="&gt;&gt;"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="257,222,0,0" TextWrapping="Wrap" Text="о нижеследующем:" VerticalAlignment="Top" Width="112"/>
+        <TextBlock HorizontalAlignment="Left" Margin="198,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Height="59" Text="1.Общие положения" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="549" Height="161"><Run Text="1.1 "/><Span><Run Text="Арендодатель за плату предоставляет принадлежащее ему на праве собственности жилое помещение Арендатору в пользование для проживания в нем."/></Span><LineBreak/><Span><Run Text="Указанное жилое помещение находится по адресу: г. _______________, ул.______________________"/></Span><LineBreak/><Span><Run Text="__________________________________________"/></Span><Span><Run Text="______"/></Span><Span><Run Text="____________________________"/></Span><LineBreak/><Run Text="дом № ______ кв. № ______, здесь и далее именуемая """/><LineBreak/><Span><Run Text="Квартира принадлежит Арендодателю на основании ______________________________"/></Span><LineBreak/><Span><Run Text="____________________________________________________________________________"/></Span><LineBreak/><Span><Run Text="____________________________________________________________________________от ________________________, зарегистрированного в реестре, за № ________________, копия которого прилагается к Договору в качестве Приложения №1, которое является его неотъемлемой частью. "/></Span><LineBreak/><Span><Run Text="Квартира имеет следующие характеристики:"/></Span><LineBreak/><Span><Run Text="жилая площадь:      "/></Span><Span><Run Text=" "/></Span><Span><Run Text="  _______ кв. м."/></Span><LineBreak/><Span><Run Text="количество комнат:  "/></Span><Span><Run Text=" "/></Span><Span><Run Text="_______."/></Span><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+
+    </Grid>
+</Window>

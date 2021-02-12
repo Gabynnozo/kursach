@@ -15,28 +15,27 @@ using System.Windows.Shapes;
 namespace Arenda.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для Object.xaml
+    /// Логика взаимодействия для COAC.xaml
     /// </summary>
-    public partial class Object : Window
+    public partial class COAC : Window
     {
-        RentEntities AE = new RentEntities();
-        public Object()
+        RentEntities Entities =new RentEntities();
+        public COAC()
         {
             InitializeComponent();
             Update();
         }
 
-        private void Update()
+        public void Update()
         {
-            AE.SaveChanges();
-            DGobject.ItemsSource = AE.House.ToList();
+            DGCoac.ItemsSource = Entities.Contragent.ToList();
         }
 
-        private void DGobject_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
-        {
-            COAC coac=new COAC();
-            coac.Show();
-            this.Close();
+        private void BTback_Click(object sender, RoutedEventArgs e)
+        { Windows.Object contract= new Windows.Object();
+            contract.Show();
+            this.Close(); 
         }
-    } 
+    }
+
 }

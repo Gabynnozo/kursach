@@ -13,6 +13,7 @@
         <PasswordBox x:Name="PBpass" HorizontalAlignment="Left" Margin="269,175,0,0" VerticalAlignment="Top" Width="120" materialDesign:HintAssist.Hint="Введите Пароль"/>
         <Button x:Name="btlog" Content="Войти" HorizontalAlignment="Left" Margin="269,236,0,0" VerticalAlignment="Top" Width="120" Click="btlog_Click"/>
         <Button x:Name="btexit1" Content="Закрыть" HorizontalAlignment="Left" Margin="269,302,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Avt" Content="Авторизация" HorizontalAlignment="Left" Margin="257,54,0,0" VerticalAlignment="Top" Width="233" FontSize="24"/>
 
     </Grid>
 </Window>

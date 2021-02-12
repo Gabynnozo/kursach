@@ -20,7 +20,7 @@ namespace Arenda
     /// </summary>
     public partial class MainWindow : Window
     {
-        ArendaEntities DB = new ArendaEntities();
+        RentEntities DB = new RentEntities();
         public MainWindow()
         {
             InitializeComponent();
@@ -40,7 +40,7 @@ namespace Arenda
             }
             else if (agent.Post == "Старший агент")
             {
-                Windows.Object contract = new Windows.Object();
+                var contract = new Windows.Object();
                 contract.Show();
                 this.Close();
             }

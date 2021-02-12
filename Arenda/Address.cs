@@ -17,13 +17,13 @@ namespace Arenda
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Address()
         {
-            this.Object = new HashSet<Object>();
+            this.House = new HashSet<House>();
         }
     
         public int IdAddress { get; set; }
         public string Address1 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Object> Object { get; set; }
+        public virtual ICollection<House> House { get; set; }
     }
 }

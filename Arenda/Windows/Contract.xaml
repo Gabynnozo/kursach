@@ -7,18 +7,17 @@
         mc:Ignorable="d"
         Title="Object" Height="450" Width="1050">
     <Grid>
-        <DataGrid x:Name="DGobject" AutoGenerateColumns="False">
+        <DataGrid x:Name="DGobject" AutoGenerateColumns="False" SelectedCellsChanged="DGobject_SelectedCellsChanged" IsReadOnly="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Цена"  Binding="{Binding Cost}" ClipboardContentBinding="{x:Null}"/>
-                <DataGridTextColumn Header="Комиссия Агента" Binding="{Binding Commission}" ClipboardContentBinding="{x:Null}"/>
-                <DataGridTextColumn Header="Площадь" Binding="{Binding ObjectArea}" ClipboardContentBinding="{x:Null}"/>
-                <DataGridTextColumn Header="Количество комнат" Binding="{Binding Rooms}" ClipboardContentBinding="{x:Null}"/>
-                <DataGridTextColumn Header="Описание" Binding="{Binding Description}" ClipboardContentBinding="{x:Null}"/>
-                <DataGridTextColumn Header="Контрагент" Binding="{Binding Contragent}" ClipboardContentBinding="{x:Null}"/>
-                <DataGridTextColumn Header="Адрес" Binding="{x:Null}" ClipboardContentBinding="{x:Null}"/>
-                <DataGridTextColumn Header="Агент" Binding="{x:Null}" ClipboardContentBinding="{x:Null}"/>
-                <DataGridTextColumn Header="Тип Обьекта" Binding="{x:Null}" ClipboardContentBinding="{x:Null}"/>
-                <DataGridTextColumn Header="Дата создания" Binding="{x:Null}" ClipboardContentBinding="{x:Null}"/>
+                <DataGridTextColumn Header="Цена"  Binding="{Binding Cost}"/>
+                <DataGridTextColumn Header="Комиссия Агента" Binding="{Binding Commission}" />
+                <DataGridTextColumn Header="Площадь" Binding="{Binding ObjectArea}" />
+                <DataGridTextColumn Header="Количество комнат" Binding="{Binding Rooms}"/>
+                <DataGridTextColumn Header="Описание" Binding="{Binding Description}" />
+                <DataGridTextColumn Header="Контрагент" Binding="{Binding Contragent}" />
+                <DataGridTextColumn Header="Адрес" Binding="{Binding IdAdress.Address}" />
+                <DataGridTextColumn Header="Тип Обьекта" Binding="{Binding IdType}" />
+                <DataGridTextColumn Header="Дата создания" Binding="{Binding DateOfCreation}" />
             </DataGrid.Columns>
         </DataGrid>
 

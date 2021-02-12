@@ -13,10 +13,10 @@ namespace Arenda
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ArendaEntities : DbContext
+    public partial class RentEntities : DbContext
     {
-        public ArendaEntities()
-            : base("name=ArendaEntities")
+        public RentEntities()
+            : base("name=RentEntities")
         {
         }
     
@@ -29,9 +29,10 @@ namespace Arenda
         public virtual DbSet<Agent> Agent { get; set; }
         public virtual DbSet<Contract> Contract { get; set; }
         public virtual DbSet<Contragent> Contragent { get; set; }
-        public virtual DbSet<Object> Object { get; set; }
+        public virtual DbSet<House> House { get; set; }
         public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<Status> Status { get; set; }
+        public virtual DbSet<StatusOrder> StatusOrder { get; set; }
         public virtual DbSet<TContract> TContract { get; set; }
         public virtual DbSet<TypeObject> TypeObject { get; set; }
     }

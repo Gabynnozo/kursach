@@ -12,20 +12,17 @@ namespace Arenda
     using System;
     using System.Collections.Generic;
     
-    public partial class Contract
+    public partial class StatusOrder
     {
-        public int IdContract { get; set; }
-        public int IdAgent { get; set; }
-        public string TypeContract { get; set; }
-        public System.DateTime DateOfContract { get; set; }
-        public int IdObject { get; set; }
-        public Nullable<double> Comision { get; set; }
-        public int IdOrder { get; set; }
-        public string IdContr { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public StatusOrder()
+        {
+            this.Order = new HashSet<Order>();
+        }
     
-        public virtual Agent Agent { get; set; }
-        public virtual House House { get; set; }
-        public virtual Order Order { get; set; }
-        public virtual TContract TContract { get; set; }
+        public string StatusOrder1 { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Order> Order { get; set; }
     }
 }

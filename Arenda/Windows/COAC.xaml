@@ -1,0 +1,25 @@
+﻿<Window x:Class="Arenda.Windows.COAC"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Arenda.Windows"
+        mc:Ignorable="d"
+        Title="COAC" Height="450" Width="1050">
+    <Grid>
+        <DataGrid x:Name="DGCoac" HorizontalAlignment="Left" Height="262" VerticalAlignment="Top" Width="1042" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="0.2*" Header ="Фамилия" Binding="{Binding LastName}" ClipboardContentBinding="{x:Null}"/>
+                <DataGridTextColumn Width="0.2*" Header ="Имя" Binding="{Binding FirstName}" ClipboardContentBinding="{x:Null}"/>
+                <DataGridTextColumn Width="0.2*" Header ="Отчество" Binding="{Binding SecondName}" ClipboardContentBinding="{x:Null}"/>
+                <DataGridTextColumn Width="0.2*" Header ="Номер Паспорта" Binding="{Binding IdPassport}" ClipboardContentBinding="{x:Null}"/>
+                <DataGridTextColumn Width="0.2*" Header ="Серия Паспорта" Binding="{Binding Passport}" ClipboardContentBinding="{x:Null}"/>
+                <DataGridTextColumn Width="0.2*" Header ="Телефон" Binding="{Binding Telephone}" ClipboardContentBinding="{x:Null}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="BTaccept" Content="Принять" HorizontalAlignment="Left" Margin="783,349,0,0" VerticalAlignment="Top" Width="104"/>
+        <Button x:Name="BTback" Content="Вернуться" HorizontalAlignment="Left" Margin="642,349,0,0" VerticalAlignment="Top" Width="104" Click="BTback_Click"/>
+        
+
+    </Grid>
+</Window>
