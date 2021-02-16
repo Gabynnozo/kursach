@@ -12,25 +12,23 @@ namespace Arenda
     using System;
     using System.Collections.Generic;
     
-    public partial class Agent
+    public partial class Client
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Agent()
+        public Client()
         {
-            this.Contract = new HashSet<Contract>();
+            this.Order = new HashSet<Order>();
         }
     
-        public int IdAgent { get; set; }
-        public string LastName { get; set; }
+        public int IdClient { get; set; }
+        public string Lastname { get; set; }
         public string FirstName { get; set; }
         public string SecondName { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
         public string Telephone { get; set; }
-        public string EMail { get; set; }
-        public string Post { get; set; }
+        public double IDPassport { get; set; }
+        public double Passport { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Contract> Contract { get; set; }
+        public virtual ICollection<Order> Order { get; set; }
     }
 }

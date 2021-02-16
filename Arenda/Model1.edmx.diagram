@@ -4,26 +4,26 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a77c14e9cae949eaa0c3633908534b8c" Name="Diagram1">
-        <EntityTypeShape EntityType="ArendaModel.Address" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArendaModel.Agent" Width="1.5" PointX="9.25" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArendaModel.Contract" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArendaModel.Contragent" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArendaModel.House" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArendaModel.Order" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArendaModel.Status" Width="1.5" PointX="7.75" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArendaModel.StatusOrder" Width="1.5" PointX="0.75" PointY="13.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArendaModel.TContract" Width="1.5" PointX="3" PointY="15.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArendaModel.TypeObject" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
-        <AssociationConnector Association="ArendaModel.FK_Object_Address" ManuallyRouted="false" />
-        <AssociationConnector Association="ArendaModel.FK_Contract_Agent" ManuallyRouted="false" />
-        <AssociationConnector Association="ArendaModel.FK_Contract_Object" ManuallyRouted="false" />
+      <Diagram DiagramId="43cdc244cf0242698b52f38971e7eee8" Name="Diagram1" ZoomLevel="21">
+        <EntityTypeShape EntityType="ArendaModel.Address" Width="1.5" PointX="7.125" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArendaModel.Client" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArendaModel.Contract" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArendaModel.House" Width="1.5" PointX="10.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArendaModel.Order" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArendaModel.Status" Width="1.5" PointX="7.5" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArendaModel.StatusOr" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArendaModel.TContract" Width="1.5" PointX="18.125" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArendaModel.TypeObject" Width="1.5" PointX="11.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArendaModel.Workers" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <AssociationConnector Association="ArendaModel.FK_House_Address" ManuallyRouted="false" />
+        <AssociationConnector Association="ArendaModel.FK_Order_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="ArendaModel.FK_Contract_House" ManuallyRouted="false" />
         <AssociationConnector Association="ArendaModel.FK_Contract_Order" ManuallyRouted="false" />
         <AssociationConnector Association="ArendaModel.FK_Contract_TContract" ManuallyRouted="false" />
-        <AssociationConnector Association="ArendaModel.FK_Order_Contragent" ManuallyRouted="false" />
-        <AssociationConnector Association="ArendaModel.FK_Object_TypeObject" ManuallyRouted="false" />
-        <AssociationConnector Association="ArendaModel.FK_Order_StatusOrder" ManuallyRouted="false" />
-        <AssociationConnector Association="ArendaModel.FK_House_Status" />
+        <AssociationConnector Association="ArendaModel.FK_House_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="ArendaModel.FK_House_TypeObject" ManuallyRouted="false" />
+        <AssociationConnector Association="ArendaModel.FK_Order_StatusOr" ManuallyRouted="false" />
+        <AssociationConnector Association="ArendaModel.FK_Order_Workers" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

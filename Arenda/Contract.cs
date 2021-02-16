@@ -15,15 +15,12 @@ namespace Arenda
     public partial class Contract
     {
         public int IdContract { get; set; }
-        public int IdAgent { get; set; }
         public string TypeContract { get; set; }
         public System.DateTime DateOfContract { get; set; }
         public int IdObject { get; set; }
-        public Nullable<double> Comision { get; set; }
+        public decimal Commision { get; set; }
         public int IdOrder { get; set; }
-        public string IdContr { get; set; }
     
-        public virtual Agent Agent { get; set; }
         public virtual House House { get; set; }
         public virtual Order Order { get; set; }
         public virtual TContract TContract { get; set; }

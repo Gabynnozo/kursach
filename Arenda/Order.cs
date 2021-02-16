@@ -21,13 +21,15 @@ namespace Arenda
         }
     
         public int IdOrder { get; set; }
-        public int IdContragent { get; set; }
+        public int IdClient { get; set; }
         public string DiscriptionOrder { get; set; }
         public string StatusOrder { get; set; }
+        public int IdAgent { get; set; }
     
+        public virtual Client Client { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Contract> Contract { get; set; }
-        public virtual Contragent Contragent { get; set; }
-        public virtual StatusOrder StatusOrder1 { get; set; }
+        public virtual StatusOr StatusOr { get; set; }
+        public virtual Workers Workers { get; set; }
     }
 }

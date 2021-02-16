@@ -20,7 +20,7 @@ namespace Arenda
     /// </summary>
     public partial class MainWindow : Window
     {
-        RentEntities DB = new RentEntities();
+        ArendaEntities1 DB = new ArendaEntities1();
         public MainWindow()
         {
             InitializeComponent();

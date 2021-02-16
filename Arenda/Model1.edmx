@@ -4,89 +4,72 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Хранилище ArendaModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище ArendaModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Address">
           <Key>
             <PropertyRef Name="IdAddress" />
           </Key>
           <Property Name="IdAddress" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Address1" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
-        <EntityType Name="Agent">
+        <EntityType Name="Client">
           <Key>
-            <PropertyRef Name="IdAgent" />
+            <PropertyRef Name="IdClient" />
           </Key>
-          <Property Name="IdAgent" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IdClient" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Lastname" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="SecondName" Type="nvarchar" MaxLength="50" />
-          <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Telephone" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="EMail" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Post" Type="nvarchar" MaxLength="25" />
+          <Property Name="SecondName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="IDPassport" Type="float" Nullable="false" />
+          <Property Name="Passport" Type="float" Nullable="false" />
         </EntityType>
         <EntityType Name="Contract">
           <Key>
             <PropertyRef Name="IdContract" />
           </Key>
           <Property Name="IdContract" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="IdAgent" Type="int" Nullable="false" />
           <Property Name="TypeContract" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="DateOfContract" Type="datetime" Nullable="false" />
           <Property Name="IdObject" Type="int" Nullable="false" />
-          <Property Name="Comision" Type="float" />
+          <Property Name="Commision" Type="money" Nullable="false" />
           <Property Name="IdOrder" Type="int" Nullable="false" />
-          <Property Name="IdContr" Type="nchar" MaxLength="10" />
-        </EntityType>
-        <EntityType Name="Contragent">
-          <Key>
-            <PropertyRef Name="IdContragent" />
-          </Key>
-          <Property Name="IdContragent" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="SecondName" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Telephone" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="IdPassport" Type="nvarchar" MaxLength="4" Nullable="false" />
-          <Property Name="Passport" Type="nvarchar" MaxLength="6" Nullable="false" />
         </EntityType>
         <EntityType Name="House">
           <Key>
-            <PropertyRef Name="IDObject" />
+            <PropertyRef Name="IdObject" />
           </Key>
-          <Property Name="IDObject" Type="int" Nullable="false" />
-          <Property Name="Cost" Type="money" />
-          <Property Name="DateOfCreation" Type="datetime" />
-          <Property Name="Commission" Type="money" />
-          <Property Name="Description" Type="nvarchar(max)" />
-          <Property Name="ObjectArea" Type="nvarchar" MaxLength="10" />
-          <Property Name="Contragent" Type="nvarchar" MaxLength="50" />
-          <Property Name="IdAdress" Type="int" />
-          <Property Name="IdType" Type="int" />
-          <Property Name="Rooms" Type="int" />
-          <Property Name="Status" Type="nvarchar" MaxLength="25" />
+          <Property Name="IdObject" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cost" Type="money" Nullable="false" />
+          <Property Name="DateOfCreation" Type="datetime" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ObjectArea" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IdAddress" Type="int" Nullable="false" />
+          <Property Name="IdType" Type="int" Nullable="false" />
+          <Property Name="Rooms" Type="int" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
             <PropertyRef Name="IdOrder" />
           </Key>
           <Property Name="IdOrder" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="IdContragent" Type="int" Nullable="false" />
-          <Property Name="DiscriptionOrder" Type="nvarchar" MaxLength="200" Nullable="false" />
-          <Property Name="StatusOrder" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="IdClient" Type="int" Nullable="false" />
+          <Property Name="DiscriptionOrder" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="StatusOrder" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IdAgent" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Status">
           <Key>
-            <PropertyRef Name="Status" />
+            <PropertyRef Name="Status1" />
           </Key>
-          <Property Name="Status" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="Status1" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <EntityType Name="StatusOrder">
+        <EntityType Name="StatusOr">
           <Key>
             <PropertyRef Name="StatusOrder" />
           </Key>
-          <Property Name="StatusOrder" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="StatusOrder" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="TContract">
           <Key>
@@ -99,26 +82,324 @@
             <PropertyRef Name="IdType" />
           </Key>
           <Property Name="IdType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NameType" Type="nvarchar" MaxLength="25" Nullable="false" />
         </EntityType>
-        <Association Name="FK_Contract_Agent">
-          <End Role="Agent" Type="Self.Agent" Multiplicity="1" />
-          <End Role="Contract" Type="Self.Contract" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Agent">
-              <PropertyRef Name="IdAgent" />
-            </Principal>
-            <Dependent Role="Contract">
-              <PropertyRef Name="IdAgent" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Contract_Object">
+        <EntityType Name="Workers">
+          <Key>
+            <PropertyRef Name="IdAgent" />
+          </Key>
+          <Property Name="IdAgent" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SecondName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="EMail" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Post" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="Login" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Contract_House">
           <End Role="House" Type="Self.House" Multiplicity="1" />
           <End Role="Contract" Type="Self.Contract" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="House">
-              <PropertyRef Name="IDObject" />
+              <PropertyRef Name="IdObject" />
+            </Principal>
+            <Dependent Role="Contract">
+              <PropertyRef Name="IdObject" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contract_Order">
+          <End Role="Order" Type="Self.Order" Multiplicity="1" />
+          <End Role="Contract" Type="Self.Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="IdOrder" />
+            </Principal>
+            <Dependent Role="Contract">
+              <PropertyRef Name="IdOrder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contract_TContract">
+          <End Role="TContract" Type="Self.TContract" Multiplicity="1" />
+          <End Role="Contract" Type="Self.Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TContract">
+              <PropertyRef Name="TypeContract" />
+            </Principal>
+            <Dependent Role="Contract">
+              <PropertyRef Name="TypeContract" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_House_Address">
+          <End Role="Address" Type="Self.Address" Multiplicity="1" />
+          <End Role="House" Type="Self.House" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="IdAddress" />
+            </Principal>
+            <Dependent Role="House">
+              <PropertyRef Name="IdAddress" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_House_Status">
+          <End Role="Status" Type="Self.Status" Multiplicity="1" />
+          <End Role="House" Type="Self.House" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Status">
+              <PropertyRef Name="Status1" />
+            </Principal>
+            <Dependent Role="House">
+              <PropertyRef Name="Status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_House_TypeObject">
+          <End Role="TypeObject" Type="Self.TypeObject" Multiplicity="1" />
+          <End Role="House" Type="Self.House" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeObject">
+              <PropertyRef Name="IdType" />
+            </Principal>
+            <Dependent Role="House">
+              <PropertyRef Name="IdType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_Client">
+          <End Role="Client" Type="Self.Client" Multiplicity="1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="IdClient" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="IdClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_StatusOr">
+          <End Role="StatusOr" Type="Self.StatusOr" Multiplicity="1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StatusOr">
+              <PropertyRef Name="StatusOrder" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="StatusOrder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_Workers">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="IdAgent" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="IdAgent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище ArendaModelContainer">
+          <EntitySet Name="Address" EntityType="Self.Address" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contract" EntityType="Self.Contract" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="House" EntityType="Self.House" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StatusOr" EntityType="Self.StatusOr" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TContract" EntityType="Self.TContract" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TypeObject" EntityType="Self.TypeObject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Workers" EntityType="Self.Workers" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Contract_House" Association="Self.FK_Contract_House">
+            <End Role="House" EntitySet="House" />
+            <End Role="Contract" EntitySet="Contract" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contract_Order" Association="Self.FK_Contract_Order">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="Contract" EntitySet="Contract" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contract_TContract" Association="Self.FK_Contract_TContract">
+            <End Role="TContract" EntitySet="TContract" />
+            <End Role="Contract" EntitySet="Contract" />
+          </AssociationSet>
+          <AssociationSet Name="FK_House_Address" Association="Self.FK_House_Address">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="House" EntitySet="House" />
+          </AssociationSet>
+          <AssociationSet Name="FK_House_Status" Association="Self.FK_House_Status">
+            <End Role="Status" EntitySet="Status" />
+            <End Role="House" EntitySet="House" />
+          </AssociationSet>
+          <AssociationSet Name="FK_House_TypeObject" Association="Self.FK_House_TypeObject">
+            <End Role="TypeObject" EntitySet="TypeObject" />
+            <End Role="House" EntitySet="House" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_Client" Association="Self.FK_Order_Client">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_StatusOr" Association="Self.FK_Order_StatusOr">
+            <End Role="StatusOr" EntitySet="StatusOr" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_Workers" Association="Self.FK_Order_Workers">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ArendaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="IdAddress" />
+          </Key>
+          <Property Name="IdAddress" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="House" Relationship="Self.FK_House_Address" FromRole="Address" ToRole="House" />
+        </EntityType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="IdClient" />
+          </Key>
+          <Property Name="IdClient" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SecondName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Telephone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IDPassport" Type="Double" Nullable="false" />
+          <Property Name="Passport" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Order" Relationship="Self.FK_Order_Client" FromRole="Client" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="Contract">
+          <Key>
+            <PropertyRef Name="IdContract" />
+          </Key>
+          <Property Name="IdContract" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeContract" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DateOfContract" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IdObject" Type="Int32" Nullable="false" />
+          <Property Name="Commision" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="IdOrder" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="House" Relationship="Self.FK_Contract_House" FromRole="Contract" ToRole="House" />
+          <NavigationProperty Name="Order" Relationship="Self.FK_Contract_Order" FromRole="Contract" ToRole="Order" />
+          <NavigationProperty Name="TContract" Relationship="Self.FK_Contract_TContract" FromRole="Contract" ToRole="TContract" />
+        </EntityType>
+        <EntityType Name="House">
+          <Key>
+            <PropertyRef Name="IdObject" />
+          </Key>
+          <Property Name="IdObject" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cost" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="DateOfCreation" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ObjectArea" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IdAddress" Type="Int32" Nullable="false" />
+          <Property Name="IdType" Type="Int32" Nullable="false" />
+          <Property Name="Rooms" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Address" Relationship="Self.FK_House_Address" FromRole="House" ToRole="Address" />
+          <NavigationProperty Name="Contract" Relationship="Self.FK_Contract_House" FromRole="House" ToRole="Contract" />
+          <NavigationProperty Name="Status1" Relationship="Self.FK_House_Status" FromRole="House" ToRole="Status" />
+          <NavigationProperty Name="TypeObject" Relationship="Self.FK_House_TypeObject" FromRole="House" ToRole="TypeObject" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="IdOrder" />
+          </Key>
+          <Property Name="IdOrder" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdClient" Type="Int32" Nullable="false" />
+          <Property Name="DiscriptionOrder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StatusOrder" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IdAgent" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Client" Relationship="Self.FK_Order_Client" FromRole="Order" ToRole="Client" />
+          <NavigationProperty Name="Contract" Relationship="Self.FK_Contract_Order" FromRole="Order" ToRole="Contract" />
+          <NavigationProperty Name="StatusOr" Relationship="Self.FK_Order_StatusOr" FromRole="Order" ToRole="StatusOr" />
+          <NavigationProperty Name="Workers" Relationship="Self.FK_Order_Workers" FromRole="Order" ToRole="Workers" />
+        </EntityType>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="Status1" />
+          </Key>
+          <Property Name="Status1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="House" Relationship="Self.FK_House_Status" FromRole="Status" ToRole="House" />
+        </EntityType>
+        <EntityType Name="StatusOr">
+          <Key>
+            <PropertyRef Name="StatusOrder" />
+          </Key>
+          <Property Name="StatusOrder" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Order" Relationship="Self.FK_Order_StatusOr" FromRole="StatusOr" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="TContract">
+          <Key>
+            <PropertyRef Name="TypeContract" />
+          </Key>
+          <Property Name="TypeContract" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Contract" Relationship="Self.FK_Contract_TContract" FromRole="TContract" ToRole="Contract" />
+        </EntityType>
+        <EntityType Name="TypeObject">
+          <Key>
+            <PropertyRef Name="IdType" />
+          </Key>
+          <Property Name="IdType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameType" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="House" Relationship="Self.FK_House_TypeObject" FromRole="TypeObject" ToRole="House" />
+        </EntityType>
+        <EntityType Name="Workers">
+          <Key>
+            <PropertyRef Name="IdAgent" />
+          </Key>
+          <Property Name="IdAgent" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SecondName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Telephone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Post" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Login" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Order" Relationship="Self.FK_Order_Workers" FromRole="Workers" ToRole="Order" />
+        </EntityType>
+        <Association Name="FK_House_Address">
+          <End Role="Address" Type="Self.Address" Multiplicity="1" />
+          <End Role="House" Type="Self.House" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="IdAddress" />
+            </Principal>
+            <Dependent Role="House">
+              <PropertyRef Name="IdAddress" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_Client">
+          <End Role="Client" Type="Self.Client" Multiplicity="1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="IdClient" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="IdClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contract_House">
+          <End Role="House" Type="Self.House" Multiplicity="1" />
+          <End Role="Contract" Type="Self.Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="House">
+              <PropertyRef Name="IdObject" />
             </Principal>
             <Dependent Role="Contract">
               <PropertyRef Name="IdObject" />
@@ -150,31 +431,19 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_House_Status">
-          <End Role="Status" Type="Self.Status" Multiplicity="0..1" />
+          <End Role="Status" Type="Self.Status" Multiplicity="1" />
           <End Role="House" Type="Self.House" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Status">
-              <PropertyRef Name="Status" />
+              <PropertyRef Name="Status1" />
             </Principal>
             <Dependent Role="House">
               <PropertyRef Name="Status" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Object_Address">
-          <End Role="Address" Type="Self.Address" Multiplicity="0..1" />
-          <End Role="House" Type="Self.House" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Address">
-              <PropertyRef Name="IdAddress" />
-            </Principal>
-            <Dependent Role="House">
-              <PropertyRef Name="IdAdress" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Object_TypeObject">
-          <End Role="TypeObject" Type="Self.TypeObject" Multiplicity="0..1" />
+        <Association Name="FK_House_TypeObject">
+          <End Role="TypeObject" Type="Self.TypeObject" Multiplicity="1" />
           <End Role="House" Type="Self.House" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TypeObject">
@@ -185,23 +454,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Order_Contragent">
-          <End Role="Contragent" Type="Self.Contragent" Multiplicity="1" />
-          <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Contragent">
-              <PropertyRef Name="IdContragent" />
-            </Principal>
-            <Dependent Role="Order">
-              <PropertyRef Name="IdOrder" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Order_StatusOrder">
-          <End Role="StatusOrder" Type="Self.StatusOrder" Multiplicity="1" />
+        <Association Name="FK_Order_StatusOr">
+          <End Role="StatusOr" Type="Self.StatusOr" Multiplicity="1" />
           <End Role="Order" Type="Self.Order" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="StatusOrder">
+            <Principal Role="StatusOr">
               <PropertyRef Name="StatusOrder" />
             </Principal>
             <Dependent Role="Order">
@@ -209,22 +466,38 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Хранилище ArendaModelContainer">
-          <EntitySet Name="Address" EntityType="Self.Address" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Agent" EntityType="Self.Agent" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Contract" EntityType="Self.Contract" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Contragent" EntityType="Self.Contragent" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="House" EntityType="Self.House" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="StatusOrder" EntityType="Self.StatusOrder" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TContract" EntityType="Self.TContract" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TypeObject" EntityType="Self.TypeObject" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Contract_Agent" Association="Self.FK_Contract_Agent">
-            <End Role="Agent" EntitySet="Agent" />
-            <End Role="Contract" EntitySet="Contract" />
+        <Association Name="FK_Order_Workers">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="IdAgent" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="IdAgent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ArendaEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Address" EntityType="Self.Address" />
+          <EntitySet Name="Client" EntityType="Self.Client" />
+          <EntitySet Name="Contract" EntityType="Self.Contract" />
+          <EntitySet Name="House" EntityType="Self.House" />
+          <EntitySet Name="Order" EntityType="Self.Order" />
+          <EntitySet Name="Status" EntityType="Self.Status" />
+          <EntitySet Name="StatusOr" EntityType="Self.StatusOr" />
+          <EntitySet Name="TContract" EntityType="Self.TContract" />
+          <EntitySet Name="TypeObject" EntityType="Self.TypeObject" />
+          <EntitySet Name="Workers" EntityType="Self.Workers" />
+          <AssociationSet Name="FK_House_Address" Association="Self.FK_House_Address">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="House" EntitySet="House" />
           </AssociationSet>
-          <AssociationSet Name="FK_Contract_Object" Association="Self.FK_Contract_Object">
+          <AssociationSet Name="FK_Order_Client" Association="Self.FK_Order_Client">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contract_House" Association="Self.FK_Contract_House">
             <End Role="House" EntitySet="House" />
             <End Role="Contract" EntitySet="Contract" />
           </AssociationSet>
@@ -240,323 +513,43 @@
             <End Role="Status" EntitySet="Status" />
             <End Role="House" EntitySet="House" />
           </AssociationSet>
-          <AssociationSet Name="FK_Object_Address" Association="Self.FK_Object_Address">
-            <End Role="Address" EntitySet="Address" />
-            <End Role="House" EntitySet="House" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Object_TypeObject" Association="Self.FK_Object_TypeObject">
+          <AssociationSet Name="FK_House_TypeObject" Association="Self.FK_House_TypeObject">
             <End Role="TypeObject" EntitySet="TypeObject" />
             <End Role="House" EntitySet="House" />
           </AssociationSet>
-          <AssociationSet Name="FK_Order_Contragent" Association="Self.FK_Order_Contragent">
-            <End Role="Contragent" EntitySet="Contragent" />
+          <AssociationSet Name="FK_Order_StatusOr" Association="Self.FK_Order_StatusOr">
+            <End Role="StatusOr" EntitySet="StatusOr" />
             <End Role="Order" EntitySet="Order" />
           </AssociationSet>
-          <AssociationSet Name="FK_Order_StatusOrder" Association="Self.FK_Order_StatusOrder">
-            <End Role="StatusOrder" EntitySet="StatusOrder" />
+          <AssociationSet Name="FK_Order_Workers" Association="Self.FK_Order_Workers">
+            <End Role="Workers" EntitySet="Workers" />
             <End Role="Order" EntitySet="Order" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
-    <!-- CSDL content -->
-    <edmx:ConceptualModels>
-      <Schema Namespace="ArendaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Address">
-          <Key>
-            <PropertyRef Name="IdAddress" />
-          </Key>
-          <Property Name="IdAddress" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Address1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="House" Relationship="Self.FK_Object_Address" FromRole="Address" ToRole="House" />
-        </EntityType>
-        <EntityType Name="Agent">
-          <Key>
-            <PropertyRef Name="IdAgent" />
-          </Key>
-          <Property Name="IdAgent" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="SecondName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Telephone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="EMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Post" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Contract" Relationship="Self.FK_Contract_Agent" FromRole="Agent" ToRole="Contract" />
-        </EntityType>
-        <EntityType Name="Contract">
-          <Key>
-            <PropertyRef Name="IdContract" />
-          </Key>
-          <Property Name="IdContract" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IdAgent" Type="Int32" Nullable="false" />
-          <Property Name="TypeContract" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="DateOfContract" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="IdObject" Type="Int32" Nullable="false" />
-          <Property Name="Comision" Type="Double" />
-          <Property Name="IdOrder" Type="Int32" Nullable="false" />
-          <Property Name="IdContr" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <NavigationProperty Name="Agent" Relationship="Self.FK_Contract_Agent" FromRole="Contract" ToRole="Agent" />
-          <NavigationProperty Name="House" Relationship="Self.FK_Contract_Object" FromRole="Contract" ToRole="House" />
-          <NavigationProperty Name="Order" Relationship="Self.FK_Contract_Order" FromRole="Contract" ToRole="Order" />
-          <NavigationProperty Name="TContract" Relationship="Self.FK_Contract_TContract" FromRole="Contract" ToRole="TContract" />
-        </EntityType>
-        <EntityType Name="Contragent">
-          <Key>
-            <PropertyRef Name="IdContragent" />
-          </Key>
-          <Property Name="IdContragent" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="SecondName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Telephone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="IdPassport" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Passport" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Order" Relationship="Self.FK_Order_Contragent" FromRole="Contragent" ToRole="Order" />
-        </EntityType>
-        <EntityType Name="House">
-          <Key>
-            <PropertyRef Name="IDObject" />
-          </Key>
-          <Property Name="IDObject" Type="Int32" Nullable="false" />
-          <Property Name="Cost" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="DateOfCreation" Type="DateTime" Precision="3" />
-          <Property Name="Commission" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="ObjectArea" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="Contragent" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="IdAdress" Type="Int32" />
-          <Property Name="IdType" Type="Int32" />
-          <Property Name="Rooms" Type="Int32" />
-          <Property Name="Status" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Address" Relationship="Self.FK_Object_Address" FromRole="House" ToRole="Address" />
-          <NavigationProperty Name="Contract" Relationship="Self.FK_Contract_Object" FromRole="House" ToRole="Contract" />
-          <NavigationProperty Name="TypeObject" Relationship="Self.FK_Object_TypeObject" FromRole="House" ToRole="TypeObject" />
-          <NavigationProperty Name="Status1" Relationship="ArendaModel.FK_House_Status" FromRole="House" ToRole="Status" />
-        </EntityType>
-        <EntityType Name="Order">
-          <Key>
-            <PropertyRef Name="IdOrder" />
-          </Key>
-          <Property Name="IdOrder" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IdContragent" Type="Int32" Nullable="false" />
-          <Property Name="DiscriptionOrder" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="StatusOrder" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Contract" Relationship="Self.FK_Contract_Order" FromRole="Order" ToRole="Contract" />
-          <NavigationProperty Name="Contragent" Relationship="Self.FK_Order_Contragent" FromRole="Order" ToRole="Contragent" />
-          <NavigationProperty Name="StatusOrder1" Relationship="Self.FK_Order_StatusOrder" FromRole="Order" ToRole="StatusOrder" />
-        </EntityType>
-        <EntityType Name="Status">
-          <Key>
-            <PropertyRef Name="Status1" />
-          </Key>
-          <Property Name="Status1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="House" Relationship="ArendaModel.FK_House_Status" FromRole="Status" ToRole="House" />
-        </EntityType>
-        <EntityType Name="StatusOrder">
-          <Key>
-            <PropertyRef Name="StatusOrder1" />
-          </Key>
-          <Property Name="StatusOrder1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Order" Relationship="Self.FK_Order_StatusOrder" FromRole="StatusOrder" ToRole="Order" />
-        </EntityType>
-        <EntityType Name="TContract">
-          <Key>
-            <PropertyRef Name="TypeContract" />
-          </Key>
-          <Property Name="TypeContract" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Contract" Relationship="Self.FK_Contract_TContract" FromRole="TContract" ToRole="Contract" />
-        </EntityType>
-        <EntityType Name="TypeObject">
-          <Key>
-            <PropertyRef Name="IdType" />
-          </Key>
-          <Property Name="IdType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="House" Relationship="Self.FK_Object_TypeObject" FromRole="TypeObject" ToRole="House" />
-        </EntityType>
-        <Association Name="FK_Object_Address">
-          <End Role="Address" Type="Self.Address" Multiplicity="0..1" />
-          <End Role="House" Type="Self.House" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Address">
-              <PropertyRef Name="IdAddress" />
-            </Principal>
-            <Dependent Role="House">
-              <PropertyRef Name="IdAdress" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Contract_Agent">
-          <End Role="Agent" Type="Self.Agent" Multiplicity="1" />
-          <End Role="Contract" Type="Self.Contract" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Agent">
-              <PropertyRef Name="IdAgent" />
-            </Principal>
-            <Dependent Role="Contract">
-              <PropertyRef Name="IdAgent" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Contract_Object">
-          <End Role="House" Type="Self.House" Multiplicity="1" />
-          <End Role="Contract" Type="Self.Contract" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="House">
-              <PropertyRef Name="IDObject" />
-            </Principal>
-            <Dependent Role="Contract">
-              <PropertyRef Name="IdObject" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Contract_Order">
-          <End Role="Order" Type="Self.Order" Multiplicity="1" />
-          <End Role="Contract" Type="Self.Contract" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Order">
-              <PropertyRef Name="IdOrder" />
-            </Principal>
-            <Dependent Role="Contract">
-              <PropertyRef Name="IdOrder" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Contract_TContract">
-          <End Role="TContract" Type="Self.TContract" Multiplicity="1" />
-          <End Role="Contract" Type="Self.Contract" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TContract">
-              <PropertyRef Name="TypeContract" />
-            </Principal>
-            <Dependent Role="Contract">
-              <PropertyRef Name="TypeContract" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Order_Contragent">
-          <End Role="Contragent" Type="Self.Contragent" Multiplicity="1" />
-          <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Contragent">
-              <PropertyRef Name="IdContragent" />
-            </Principal>
-            <Dependent Role="Order">
-              <PropertyRef Name="IdOrder" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Object_TypeObject">
-          <End Role="TypeObject" Type="Self.TypeObject" Multiplicity="0..1" />
-          <End Role="House" Type="Self.House" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TypeObject">
-              <PropertyRef Name="IdType" />
-            </Principal>
-            <Dependent Role="House">
-              <PropertyRef Name="IdType" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Order_StatusOrder">
-          <End Role="StatusOrder" Type="Self.StatusOrder" Multiplicity="1" />
-          <End Role="Order" Type="Self.Order" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="StatusOrder">
-              <PropertyRef Name="StatusOrder1" />
-            </Principal>
-            <Dependent Role="Order">
-              <PropertyRef Name="StatusOrder" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="RentEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Address" EntityType="Self.Address" />
-          <EntitySet Name="Agent" EntityType="Self.Agent" />
-          <EntitySet Name="Contract" EntityType="Self.Contract" />
-          <EntitySet Name="Contragent" EntityType="Self.Contragent" />
-          <EntitySet Name="House" EntityType="Self.House" />
-          <EntitySet Name="Order" EntityType="Self.Order" />
-          <EntitySet Name="Status" EntityType="Self.Status" />
-          <EntitySet Name="StatusOrder" EntityType="Self.StatusOrder" />
-          <EntitySet Name="TContract" EntityType="Self.TContract" />
-          <EntitySet Name="TypeObject" EntityType="Self.TypeObject" />
-          <AssociationSet Name="FK_Object_Address" Association="Self.FK_Object_Address">
-            <End Role="Address" EntitySet="Address" />
-            <End Role="House" EntitySet="House" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Contract_Agent" Association="Self.FK_Contract_Agent">
-            <End Role="Agent" EntitySet="Agent" />
-            <End Role="Contract" EntitySet="Contract" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Contract_Object" Association="Self.FK_Contract_Object">
-            <End Role="House" EntitySet="House" />
-            <End Role="Contract" EntitySet="Contract" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Contract_Order" Association="Self.FK_Contract_Order">
-            <End Role="Order" EntitySet="Order" />
-            <End Role="Contract" EntitySet="Contract" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Contract_TContract" Association="Self.FK_Contract_TContract">
-            <End Role="TContract" EntitySet="TContract" />
-            <End Role="Contract" EntitySet="Contract" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Order_Contragent" Association="Self.FK_Order_Contragent">
-            <End Role="Contragent" EntitySet="Contragent" />
-            <End Role="Order" EntitySet="Order" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Object_TypeObject" Association="Self.FK_Object_TypeObject">
-            <End Role="TypeObject" EntitySet="TypeObject" />
-            <End Role="House" EntitySet="House" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Order_StatusOrder" Association="Self.FK_Order_StatusOrder">
-            <End Role="StatusOrder" EntitySet="StatusOrder" />
-            <End Role="Order" EntitySet="Order" />
-          </AssociationSet>
-          <AssociationSet Name="FK_House_Status" Association="ArendaModel.FK_House_Status">
-            <End Role="Status" EntitySet="Status" />
-            <End Role="House" EntitySet="House" />
-          </AssociationSet>
-        </EntityContainer>
-        <Association Name="FK_House_Status">
-          <End Type="ArendaModel.Status" Role="Status" Multiplicity="0..1" />
-          <End Type="ArendaModel.House" Role="House" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Status">
-              <PropertyRef Name="Status1" />
-            </Principal>
-            <Dependent Role="House">
-              <PropertyRef Name="Status" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище ArendaModelContainer" CdmEntityContainer="RentEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище ArendaModelContainer" CdmEntityContainer="ArendaEntities1">
           <EntitySetMapping Name="Address">
             <EntityTypeMapping TypeName="ArendaModel.Address">
               <MappingFragment StoreEntitySet="Address">
                 <ScalarProperty Name="IdAddress" ColumnName="IdAddress" />
-                <ScalarProperty Name="Address1" ColumnName="Address" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Agent">
-            <EntityTypeMapping TypeName="ArendaModel.Agent">
-              <MappingFragment StoreEntitySet="Agent">
-                <ScalarProperty Name="IdAgent" ColumnName="IdAgent" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <EntitySetMapping Name="Client">
+            <EntityTypeMapping TypeName="ArendaModel.Client">
+              <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="SecondName" ColumnName="SecondName" />
-                <ScalarProperty Name="Login" ColumnName="Login" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Telephone" ColumnName="Telephone" />
-                <ScalarProperty Name="EMail" ColumnName="EMail" />
-                <ScalarProperty Name="Post" ColumnName="Post" />
+                <ScalarProperty Name="IDPassport" ColumnName="IDPassport" />
+                <ScalarProperty Name="Passport" ColumnName="Passport" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -564,40 +557,23 @@
             <EntityTypeMapping TypeName="ArendaModel.Contract">
               <MappingFragment StoreEntitySet="Contract">
                 <ScalarProperty Name="IdContract" ColumnName="IdContract" />
-                <ScalarProperty Name="IdAgent" ColumnName="IdAgent" />
                 <ScalarProperty Name="TypeContract" ColumnName="TypeContract" />
                 <ScalarProperty Name="DateOfContract" ColumnName="DateOfContract" />
                 <ScalarProperty Name="IdObject" ColumnName="IdObject" />
-                <ScalarProperty Name="Comision" ColumnName="Comision" />
+                <ScalarProperty Name="Commision" ColumnName="Commision" />
                 <ScalarProperty Name="IdOrder" ColumnName="IdOrder" />
-                <ScalarProperty Name="IdContr" ColumnName="IdContr" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Contragent">
-            <EntityTypeMapping TypeName="ArendaModel.Contragent">
-              <MappingFragment StoreEntitySet="Contragent">
-                <ScalarProperty Name="IdContragent" ColumnName="IdContragent" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="SecondName" ColumnName="SecondName" />
-                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
-                <ScalarProperty Name="IdPassport" ColumnName="IdPassport" />
-                <ScalarProperty Name="Passport" ColumnName="Passport" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="House">
             <EntityTypeMapping TypeName="ArendaModel.House">
               <MappingFragment StoreEntitySet="House">
-                <ScalarProperty Name="IDObject" ColumnName="IDObject" />
+                <ScalarProperty Name="IdObject" ColumnName="IdObject" />
                 <ScalarProperty Name="Cost" ColumnName="Cost" />
                 <ScalarProperty Name="DateOfCreation" ColumnName="DateOfCreation" />
-                <ScalarProperty Name="Commission" ColumnName="Commission" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="ObjectArea" ColumnName="ObjectArea" />
-                <ScalarProperty Name="Contragent" ColumnName="Contragent" />
-                <ScalarProperty Name="IdAdress" ColumnName="IdAdress" />
+                <ScalarProperty Name="IdAddress" ColumnName="IdAddress" />
                 <ScalarProperty Name="IdType" ColumnName="IdType" />
                 <ScalarProperty Name="Rooms" ColumnName="Rooms" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
@@ -608,23 +584,24 @@
             <EntityTypeMapping TypeName="ArendaModel.Order">
               <MappingFragment StoreEntitySet="Order">
                 <ScalarProperty Name="IdOrder" ColumnName="IdOrder" />
-                <ScalarProperty Name="IdContragent" ColumnName="IdContragent" />
+                <ScalarProperty Name="IdClient" ColumnName="IdClient" />
                 <ScalarProperty Name="DiscriptionOrder" ColumnName="DiscriptionOrder" />
                 <ScalarProperty Name="StatusOrder" ColumnName="StatusOrder" />
+                <ScalarProperty Name="IdAgent" ColumnName="IdAgent" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Status">
             <EntityTypeMapping TypeName="ArendaModel.Status">
               <MappingFragment StoreEntitySet="Status">
-                <ScalarProperty Name="Status1" ColumnName="Status" />
+                <ScalarProperty Name="Status1" ColumnName="Status1" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="StatusOrder">
-            <EntityTypeMapping TypeName="ArendaModel.StatusOrder">
-              <MappingFragment StoreEntitySet="StatusOrder">
-                <ScalarProperty Name="StatusOrder1" ColumnName="StatusOrder" />
+          <EntitySetMapping Name="StatusOr">
+            <EntityTypeMapping TypeName="ArendaModel.StatusOr">
+              <MappingFragment StoreEntitySet="StatusOr">
+                <ScalarProperty Name="StatusOrder" ColumnName="StatusOrder" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -639,7 +616,22 @@
             <EntityTypeMapping TypeName="ArendaModel.TypeObject">
               <MappingFragment StoreEntitySet="TypeObject">
                 <ScalarProperty Name="IdType" ColumnName="IdType" />
-                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="NameType" ColumnName="NameType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Workers">
+            <EntityTypeMapping TypeName="ArendaModel.Workers">
+              <MappingFragment StoreEntitySet="Workers">
+                <ScalarProperty Name="IdAgent" ColumnName="IdAgent" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="SecondName" ColumnName="SecondName" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="EMail" ColumnName="EMail" />
+                <ScalarProperty Name="Post" ColumnName="Post" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

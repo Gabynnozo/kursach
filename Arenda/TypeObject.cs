@@ -21,7 +21,7 @@ namespace Arenda
         }
     
         public int IdType { get; set; }
-        public string Type { get; set; }
+        public string NameType { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<House> House { get; set; }

@@ -75,13 +75,10 @@
     <Compile Include="Address.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Agent.cs">
+    <Compile Include="Client.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Contract.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Contragent.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="House.cs">
@@ -108,7 +105,7 @@
     <Compile Include="Status.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="StatusOrder.cs">
+    <Compile Include="StatusOr.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="TContract.cs">
@@ -125,6 +122,9 @@
     </Compile>
     <Compile Include="Windows\Contract.xaml.cs">
       <DependentUpon>Contract.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Workers.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

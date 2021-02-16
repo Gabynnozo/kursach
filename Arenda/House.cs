@@ -20,22 +20,20 @@ namespace Arenda
             this.Contract = new HashSet<Contract>();
         }
     
-        public int IDObject { get; set; }
-        public Nullable<decimal> Cost { get; set; }
-        public Nullable<System.DateTime> DateOfCreation { get; set; }
-        public Nullable<decimal> Commission { get; set; }
+        public int IdObject { get; set; }
+        public decimal Cost { get; set; }
+        public System.DateTime DateOfCreation { get; set; }
         public string Description { get; set; }
         public string ObjectArea { get; set; }
-        public string Contragent { get; set; }
-        public Nullable<int> IdAdress { get; set; }
-        public Nullable<int> IdType { get; set; }
-        public Nullable<int> Rooms { get; set; }
+        public int IdAddress { get; set; }
+        public int IdType { get; set; }
+        public int Rooms { get; set; }
         public string Status { get; set; }
     
         public virtual Address Address { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Contract> Contract { get; set; }
-        public virtual TypeObject TypeObject { get; set; }
         public virtual Status Status1 { get; set; }
+        public virtual TypeObject TypeObject { get; set; }
     }
 }

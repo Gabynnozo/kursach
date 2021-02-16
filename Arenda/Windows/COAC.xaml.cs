@@ -19,7 +19,7 @@ namespace Arenda.Windows
     /// </summary>
     public partial class COAC : Window
     {
-        RentEntities Entities =new RentEntities();
+        ArendaEntities1 Entities =new ArendaEntities1();
         public COAC()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace Arenda.Windows
 
         public void Update()
         {
-            DGCoac.ItemsSource = Entities.Contragent.ToList();
+            DGCoac.ItemsSource = Entities.Client.ToList();
         }
 
         private void BTback_Click(object sender, RoutedEventArgs e)

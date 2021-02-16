@@ -19,7 +19,7 @@ namespace Arenda.Windows
     /// </summary>
     public partial class Object : Window
     {
-        RentEntities AE = new RentEntities();
+        ArendaEntities1 AE = new ArendaEntities1();
         public Object()
         {
             InitializeComponent();
