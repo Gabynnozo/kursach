@@ -3,21 +3,48 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Arenda"
         mc:Ignorable="d"
-        Title="Window1" Height="600" Width="594">
-    <Grid>
-        <TextBlock HorizontalAlignment="Left"  TextWrapping="Wrap" VerticalAlignment="Center" Margin="198,19,0,497" Height="53" Width="184" FontSize="20" RenderTransformOrigin="0.483,-0.08"><Run Text="Договор Аренды"/><LineBreak/><Run Text="Недвижимости"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="20,105,0,0" TextWrapping="Wrap"       VerticalAlignment="Top" Width="135"><Run Text="г.___________"/><Run Text="____"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="424,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135"><Run Text="&lt;&lt;"/><Run Text="___"/><Run Text="&gt;&gt;_________20__ "/><Run Text="г."/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="20,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="539"><Run Text="Гр."/><Run Text="_____________________________________________________________"/><Run Text=",паспорт:"/><Run Text=" c"/><Run Text="ерия_________,№_____________,"/><LineBreak/><Run Text="выданный"/><Run Text="__________________________________________"/><Run Text=",проживающий"/><Run Text=" "/><Run Text="по адресу:"/><LineBreak/><Run Text="______________________________________________________"/><Run Text="_______________"/><Run Text=",именуемый в дальнейшем"/><LineBreak/><Run Text=""/></TextBlock>
+        Title="Window1" Height="1014.333" Width="594">
+    <Grid x:Name="print" Margin="0,0,0,-2">
+        <TextBlock HorizontalAlignment="Left"  TextWrapping="Wrap" Margin="198,72,0,0" Width="184" FontSize="20" RenderTransformOrigin="0.483,-0.08" Height="67" VerticalAlignment="Top"><Run Text="Договор Аренды"/><LineBreak/><Run Text="Недвижимости"/></TextBlock>
+        <TextBlock x:Name="TBCity" HorizontalAlignment="Left"  Margin="6,92,0,0" TextWrapping="Wrap" Text=""      VerticalAlignment="Top"  Width="auto"/>
+        <TextBlock x:Name="TBDate" HorizontalAlignment="Left" Margin="424,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135"><Run Text=""/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="20,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="539"><Run Text="Гр.                                            ,паспорт:"/><Run Text=" c"/><Run Text="ерия                                ,№                           ,"/><LineBreak/><Run Text="выданный                                    ,проживающий"/><Run Text=" "/><Run Text="по адресу:"/><LineBreak/><Run Text="именуемый в дальнейшем"/><LineBreak/><Run Text=""/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="20,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" FontWeight="Bold"><Run Text="&lt;&lt;"/><Run Text="Арендодатель"/><Run Text="&gt;&gt;"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="144,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="415"><Run Text=",с другой стороны,именуемые в дальнейшем "/><Run Text="&lt;&lt;"/><Run Text="Стороны"/><Run Text="&gt;&gt;"/><Run Text=",заключили  "/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="20,219,0,0" TextWrapping="Wrap" Text="договор,в дальнейшем" VerticalAlignment="Top" Width="135"/>
         <TextBlock HorizontalAlignment="Left" Margin="160,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="97" FontWeight="Bold"><Run Text="&lt;&lt;"/><Run Text="Договор"/><Run Text="&gt;&gt;"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="257,222,0,0" TextWrapping="Wrap" Text="о нижеследующем:" VerticalAlignment="Top" Width="112"/>
         <TextBlock HorizontalAlignment="Left" Margin="198,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Height="59" Text="1.Общие положения" FontSize="20"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="549" Height="161"><Run Text="1.1 "/><Span><Run Text="Арендодатель за плату предоставляет принадлежащее ему на праве собственности жилое помещение Арендатору в пользование для проживания в нем."/></Span><LineBreak/><Span><Run Text="Указанное жилое помещение находится по адресу: г. _______________, ул.______________________"/></Span><LineBreak/><Span><Run Text="__________________________________________"/></Span><Span><Run Text="______"/></Span><Span><Run Text="____________________________"/></Span><LineBreak/><Run Text="дом № ______ кв. № ______, здесь и далее именуемая """/><LineBreak/><Span><Run Text="Квартира принадлежит Арендодателю на основании ______________________________"/></Span><LineBreak/><Span><Run Text="____________________________________________________________________________"/></Span><LineBreak/><Span><Run Text="____________________________________________________________________________от ________________________, зарегистрированного в реестре, за № ________________, копия которого прилагается к Договору в качестве Приложения №1, которое является его неотъемлемой частью. "/></Span><LineBreak/><Span><Run Text="Квартира имеет следующие характеристики:"/></Span><LineBreak/><Span><Run Text="жилая площадь:      "/></Span><Span><Run Text=" "/></Span><Span><Run Text="  _______ кв. м."/></Span><LineBreak/><Span><Run Text="количество комнат:  "/></Span><Span><Run Text=" "/></Span><Span><Run Text="_______."/></Span><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="10,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="549" Height="49"><Run Text="1.1 "/><Span><Run Text="Арендодатель за плату предоставляет принадлежащее ему на праве собственности жилое помещение Арендатору в пользование для проживания в нем."/></Span><LineBreak/><Run Text="Указанное жилое помещение находится по адресу"/><Run Text="                "/><LineBreak/><Run Text="                                                                                             "/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="TBName" HorizontalAlignment="Left" Margin="37,144,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="133"/>
+        <TextBlock x:Name="TBPasS" HorizontalAlignment="Left" Margin="274,144,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="53"/>
+        <TextBlock x:Name="TBPassN" HorizontalAlignment="Left" Margin="395,144,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="77"/>
+        <TextBlock x:Name="TBPassCity" HorizontalAlignment="Left" Margin="83,160,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="auto"/>
+        <TextBlock x:Name="TBAddress" HorizontalAlignment="Left" Margin="346,160,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="133"/>
+        <TextBlock x:Name="TBAddressObject" HorizontalAlignment="Left" Margin="10,384,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="401"/>
+        <TextBlock x:Name="TBReason" HorizontalAlignment="Left" Margin="6,426,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="228"/>
+        <TextBlock x:Name="TBReasonDate" HorizontalAlignment="Left" Margin="377,426,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="auto"/>
+        <TextBlock x:Name="TBReasonRestr" HorizontalAlignment="Left" Margin="10,447,0,0" TextWrapping="Wrap" Text="                                                                  х" VerticalAlignment="Top" Width="529"/>
+        <TextBlock x:Name="TBObjArea" HorizontalAlignment="Left" Margin="144,545,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="133"/>
+        <TextBlock HorizontalAlignment="Left" Margin="0,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="516" Height="64"><Run Text="                                                                                                                                                              копия которого прилагается к Договору в качестве Приложения №1, которое является его неотъемлемой частью. "/><LineBreak/><Run Text="Недвижимость"/><Run Text=" имеет следующие характеристики:"/><LineBreak/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="313,429,0,0" TextWrapping="Wrap" Text="От" VerticalAlignment="Top" RenderTransformOrigin="2.386,4.971"/>
+        <TextBlock HorizontalAlignment="Left" Margin="0,447,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215"><Run Text="зарегистри"/><Run Text="рованного в реестре , за №"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="10,405,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="440"><Run Text="здесь и далее именуемая "/><Run FontWeight="Bold" Text="Обьект"/><Run Text=" принадлежит Арендодателю"/><Run Text="  "/><Run Text=" "/><Run Text=" на основании"/><Run Text=":"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="0,545,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="89"><Run Text="площадь:      "/><Span><Run Text=" "/></Span><Run Text="  "/><LineBreak/><Span><Run Text="количество комнат: "/></Span><LineBreak/><Run Text="жилая площадь:"/><Run Text=" "/><Span><Run Text=" "/></Span></TextBlock>
+        <TextBlock x:Name="TBRooms" HorizontalAlignment="Left" Margin="144,561,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="LiveArea" HorizontalAlignment="Left" Margin="144,577,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="198,618,0,0" TextWrapping="Wrap" Text="Данные Сторон" VerticalAlignment="Top" Width="196" FontSize="20"/>
+        <TextBlock x:Name="TBData" HorizontalAlignment="Left" Margin="10,662,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="112" Width="auto"/>
+        <TextBlock x:Name="TBWorker" HorizontalAlignment="Left" Margin="430,662,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="112" Width="129" Cursor="Adad" Text="asdsada"/>
+        <Button x:Name="BTPrint"  HorizontalAlignment="Left" Margin="484,943,0,0" VerticalAlignment="Top" Width="75" Click="BTPrint_Click">
+            <materialDesign:PackIcon Kind="Printer"/>
+            
+            
+             
+        </Button>
 
     </Grid>
 </Window>

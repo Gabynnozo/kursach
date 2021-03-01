@@ -33,12 +33,12 @@ namespace Arenda
 
         private void btlog_Click(object sender, RoutedEventArgs e)
         {
-            Agent agent = DB.Agent.Where(x => x.Login == TBlog.Text && x.Password == PBpass.Password).SingleOrDefault();
-            if (agent == null)
+            //Agent agent = DB. Agent.Where(x => x.Login == TBlog.Text && x.Password == PBpass.Password).SingleOrDefault();
+            //if (agent == null)
             {
                 MessageBox.Show("Такого Пользователя нет");
             }
-            else if (agent.Post == "Старший агент")
+            //else if (agent.Post == "Старший агент")
             {
                 var contract = new Windows.Object();
                 contract.Show();

@@ -22,6 +22,39 @@ namespace Arenda
         public Window1()
         {
             InitializeComponent();
+            flued();
+        }
+        public void flued()
+        {
+
+        }
+
+        private void BTPrint_Click(object sender, RoutedEventArgs e)
+        {
+
+
+            try
+            {
+                BTPrint.Visibility = Visibility.Hidden;
+                this.IsEnabled = false;
+                PrintDialog printDialog = new PrintDialog();
+                if (printDialog.ShowDialog() == true)
+                {
+                    printDialog.PrintVisual(print, "invoice");
+                }
+            }
+            finally
+            {
+            }
+        
+            {
+                this.IsEnabled = true;
+                this.Close();
+            }
+
+
+            
+            }
         }
     }
-}
+
